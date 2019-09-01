@@ -13,6 +13,17 @@ const app = express();
 app.use(cors());
 const router =express.Router();
 
+//using body parser in the app
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+
+//connecting to Database
+const db = "mongodb://127.0.0.1:27017/MERNProject";
+mongoose.connect(db,{useNewUrlParser:true})
+.then(()=>console.log('DB Connected successfully'))
+.catch(err=>console.log(err));
+
+//routes
 router.get('/',(req,res)=>{
     return res.send('successfullyy hit 3001');
 });
