@@ -19,3 +19,5 @@ date:{
     default : Date.now
 }
 });
+
+module.exports = User = mongoose.model("users",userSchema);
