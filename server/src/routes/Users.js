@@ -1,3 +1,5 @@
+var express = require('express');
+var router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require ('jsonwebtoken');
 const keys = require('../config/keys');
@@ -55,3 +57,4 @@ router.post('/register',(req,res)=>{
     });
 });
 
+module.exports = router;
