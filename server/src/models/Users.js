@@ -20,4 +20,4 @@ date:{
 }
 });
 
-module.exports = User = mongoose.model("users",userSchema);
+module.exports = Users = mongoose.model("users",userSchema);
